@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Overlay, Tooltip } from 'react-bootstrap';
 import shareIcon from '../images/share.png';
-import '../css/ShareButton.css';
 
 const copy = require('clipboard-copy');
 
@@ -27,7 +26,7 @@ function ShareButton(props) {
       <button
         type="button"
         data-testid="share-btn"
-        className="recipe-footer-btn"
+        className="user__btn"
         onClick={ () => {
           copyToClip();
           setUrlCopy(!ulrCopy);

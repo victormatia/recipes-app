@@ -1,10 +1,3 @@
-:root {
-
-  --red: rgb(253, 46, 0);
-
-  --white: rgb(245, 245, 246);
-}
-
 @keyframes is-rotating {
 
   to {

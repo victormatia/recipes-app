@@ -49,7 +49,12 @@ function RecipeDetails(props) {
             initial={ { opacity: 0 } }
             animate={ { opacity: 1 } }
             exit={ { opacity: 0 } }
+            className="details__screen"
           >
+            <section className="user__actions">
+              <FavoriteButton recipe={ recipe } id={ id } type={ type } />
+              <ShareButton history={ history } />
+            </section>
             <RecipeImage type={ type } recipe={ recipe } />
             <section className="page-recipe-container">
               <div className="recipe-container">
@@ -69,8 +74,6 @@ function RecipeDetails(props) {
                 type={ type }
                 recipe={ recipe }
               />
-              <FavoriteButton recipe={ recipe } id={ id } type={ type } />
-              <ShareButton history={ history } />
             </div>
             <Footer />
           </motion.div>)}

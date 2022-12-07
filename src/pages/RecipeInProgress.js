@@ -51,6 +51,10 @@ function RecipeInProgress(props) {
         animate={ { opacity: 1 } }
         exit={ { opacity: 0 } }
       >
+        <section className="user__actions">
+          <FavoriteButton recipe={ recipe } id={ id } type={ type } />
+          <ShareButton history={ history } />
+        </section>
         <RecipeImage type={ type } recipe={ recipe } />
         <section className="page-recipe-container">
           <div className="ingredients-inprogress">
@@ -73,8 +77,6 @@ function RecipeInProgress(props) {
             usedIngredients={ usedIngredients }
             history={ history }
           />
-          <FavoriteButton recipe={ recipe } id={ id } type={ type } />
-          <ShareButton history={ history } />
         </div>
         <Footer />
       </motion.div>

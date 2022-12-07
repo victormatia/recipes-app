@@ -54,7 +54,7 @@ function FavoriteButton(props) {
     <button
       type="button"
       data-testid="favorite-btn"
-      className="recipe-footer-btn"
+      className="user__btn"
       onClick={ handleClick }
       label="favorite"
       src={ isFavorite ? heartFavorite : whiteFavorite }

@@ -20,6 +20,7 @@ body {
 .Filter-meal {
   background: url('../images/icons8-jantar-50.png') no-repeat;
   background-position: center;
+  background-size: 40px;
   border-radius: 50%;
   border-style: none;
   height: 60px;
@@ -29,6 +30,7 @@ body {
 .Filter-drink {
   background: url('../images/icons8-drinks-64.png') no-repeat;
   background-position: center;
+  background-size: 40px;
   border-radius: 50%;
   border-style: none;
   height: 60px;
@@ -38,6 +40,7 @@ body {
 .Filter-all {
   background: url('../images/icons8-breakfast-64.png') no-repeat;
   background-position: center;
+  background-size: 40px;
   border-radius: 50%;
   border-style: none;
   height: 60px;

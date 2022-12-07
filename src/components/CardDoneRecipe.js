@@ -9,9 +9,7 @@ function CardDoneRecipe({ recipe, index }) {
   const url = type === 'meal' ? `/meals/${id}`
     : `/drinks/${id}`;
   return (
-
     <div>
-
       <Link to={ url }>
         <div
           className="card"
@@ -68,7 +66,6 @@ function CardDoneRecipe({ recipe, index }) {
       <ShareButtonDone recipe={ recipe } index={ index } />
       <Footer />
     </div>
-
   );
 }
 

@@ -144,8 +144,7 @@ export default function Recipes() {
         >
           <section className="live__scroll icons__category">
             { recipeList.list?.length > 0 ? recipeList.list.map(({ strCategory }) => (
-              <label
-                name={ strCategory }
+              <div
                 key={ strCategory }
                 htmlFor={ strCategory }
                 className="live__scroll--box icon__category"
@@ -157,10 +156,10 @@ export default function Recipes() {
                   onClick={ toggleFilter ? getByCategory : clearFilters }
                   data-testid={ `${strCategory}-category-filter` }
                 >
-                  <img src={ iconsBreakfast } alt="" />
+                  <img name={ strCategory } src={ iconsBreakfast } alt="" />
                 </button>
                 <p>{strCategory}</p>
-              </label>
+              </div>
             )) : null }
             <div className="live__scroll--box icon__category">
               <button

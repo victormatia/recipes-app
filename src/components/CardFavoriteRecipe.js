@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import FavoritePageButton from './FavoritePageButton';
 import ShareButtonDone from './ShareButtonDone';
+import Footer from './Footer';
 
 function CardFavoriteRecipe({ recipe, index, setFavoriteRecipes }) {
   const { type, id } = recipe;
@@ -12,45 +13,40 @@ function CardFavoriteRecipe({ recipe, index, setFavoriteRecipes }) {
   return (
     <div>
       <Link to={ url }>
-        <img
-          className="fav-image"
-          width="270px"
-          data-testid={ `${index}-horizontal-image` }
-          src={ recipe.image }
-          alt="imagem not found"
-        />
-      </Link>
-      {
-        recipe.type === 'meal' ? (
-          <h3
-            style={ { color: 'red', fontSize: 25 } }
-            data-testid={ `${index}-horizontal-top-text` }
-          >
-            { `${recipe.nationality} - ${recipe.category}` }
-          </h3>
-        ) : (
-          <h3
-            style={ { color: 'red', fontSize: 25 } }
-            data-testid={ `${index}-horizontal-top-text` }
-          >
-            { recipe.alcoholicOrNot }
-          </h3>
-        )
-      }
-      <Link to={ url }>
-        <h3
-          data-testid={ `${index}-horizontal-name` }
-          style={ { color: 'red', fontSize: 32 } }
+        <div
+          className="card"
+          style={ {
+            background: `url(${recipe.image})`,
+            backgroundSize: 'cover',
+          } }
         >
-          { recipe.name }
-        </h3>
+          <div className="gradient">
+            <h3
+              className="name__recipe"
+            >
+              {recipe.name}
+            </h3>
+            <br />
+            {
+              recipe.type === 'meal' ? (
+                <h3
+                  className="category__recipe"
+                  data-testid={ `${index}-horizontal-top-text` }
+                >
+                  {`${recipe.nationality} - ${recipe.category}`}
+                </h3>
+              ) : (
+                <h3
+                  className="category__recipe"
+                  data-testid={ `${index}-horizontal-top-text` }
+                >
+                  {recipe.alcoholicOrNot}
+                </h3>
+              )
+            }
+          </div>
+        </div>
       </Link>
-
-      <h3
-        data-testid={ `${index}-horizontal-done-date` }
-      >
-        { recipe.doneDate }
-      </h3>
       <section className="buttons">
         <FavoritePageButton
           index={ index }
@@ -59,6 +55,7 @@ function CardFavoriteRecipe({ recipe, index, setFavoriteRecipes }) {
         />
         <ShareButtonDone recipe={ recipe } index={ index } />
       </section>
+      <Footer />
     </div>
   );
 }

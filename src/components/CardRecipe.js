@@ -43,12 +43,6 @@ export default function CardRecipe({ recipe, index, type }) {
           </p>
           <p className="category__recipe">Lorem</p>
         </div>
-        {/* <img
-          src={ recipe[findByType(type)[0]] }
-          alt={ recipe[findByType(type)[1]] }
-          width="200px"
-          data-testid={ `${index}-card-img` }
-        /> */}
       </motion.div>
     </Link>
   );

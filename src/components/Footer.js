@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import drinkIcon from '../images/drinkIcon.svg';
-import mealIcon from '../images/mealIcon.svg';
+// import drinkIcon from '../images/drinkIcon.svg';
+// import mealIcon from '../images/mealIcon.svg';
+import iconsBeachCocktail2 from '../images/iconsBeachCocktail2.png';
+import iconsJantar from '../images/iconsJantar.png';
 
 import '../css/Footer.css';
 import RecipesAppContext from '../context/RecipesAppContext';
@@ -14,7 +16,7 @@ function Footer() {
     <footer data-testid="footer" className="footer-menu">
       <input
         type="image"
-        src={ drinkIcon }
+        src={ iconsBeachCocktail2 }
         alt="drink button"
         data-testid="drinks-bottom-btn"
         className="footer-btn"
@@ -26,7 +28,7 @@ function Footer() {
       />
       <input
         type="image"
-        src={ mealIcon }
+        src={ iconsJantar }
         alt="meal button"
         className="footer-btn"
         data-testid="meals-bottom-btn"

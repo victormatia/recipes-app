@@ -22,12 +22,15 @@ function RecipeImage(props) {
   }, [props]);
 
   return (
-    <img
-      src={ renderRecipe.img }
-      alt={ renderRecipe.name }
-      data-testid="recipe-photo"
-      className="recipe-img"
-    />
+    <section className="image__section">
+      <img
+        src={ renderRecipe.img }
+        alt={ renderRecipe.name }
+        data-testid="recipe-photo"
+        className="recipe-img"
+      />
+      <div className="backdrop" />
+    </section>
   );
 }
 

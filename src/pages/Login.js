@@ -51,7 +51,7 @@ function Login(props) {
       animate={ { opacity: 1 } }
       exit={ { opacity: 0 } }
     >
-      <section>
+      <section className="thumb-login">
         <img src={ loginThumb2 } alt="meals and wine" />
       </section>
       <form className="login-form" onSubmit={ handleSubmit }>
